@@ -1,6 +1,32 @@
 = rubin
 
-Description goes here.
+Round Robin Generator
+
+== Usage
+
+  require 'rubin'
+
+  teams = Rubin.new(['England', 'France', 'Italy', 'Spain'])
+  teams.each_matchup do |home, away, round_num|
+    # do something here
+  end
+
+  # Rubin#output will print out the matchups
+  puts teams.output # =>
+  Round 1
+  England v Italy
+  France v France
+
+
+  Round 2
+  France v England
+  Italy v France
+
+
+  Round 3
+  Italy v France
+  England v France
+
 
 == Note on Patches/Pull Requests
  
